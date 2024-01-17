@@ -1,9 +1,19 @@
-import { books } from '../../constant'
+import { useState } from 'react'
+import { booksData } from '../../constant'
 import BookSearch from './BookSearch'
 import Book from './book'
 import SortOfBooks from './sortOfBooks'
 
 export default function BookShelves() {
+  const [filteredBooks, setFilteredBooks] = useState(booksData)
+  const [books, setBooks] = useState(filteredBooks)
+  const handleSearchBook = (searchText) => {
+    setBooks(
+      filteredBooks.filter((book) =>
+        book.book_name.toLowerCase().includes(searchText.toLowerCase())
+      )
+    )
+  }
   return (
     <main className="my-10 lg:my-14">
       <header className="mx-auto mb-8 max-w-7xl lg:mb-10">
@@ -15,7 +25,7 @@ export default function BookShelves() {
               Trending Books of the Year
             </h2>
             {/* <!-- Search Box --> */}
-            <BookSearch />
+            <BookSearch onSearch={handleSearchBook} />
           </div>
           {/* <!-- sort - filter --> */}
           <SortOfBooks />

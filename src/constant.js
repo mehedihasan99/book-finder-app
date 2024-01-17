@@ -25,7 +25,7 @@ import book7 from './assets/images/books/book-7.jpg'
 import book8 from './assets/images/books/book-8.jpg'
 import book9 from './assets/images/books/book-9.jpg'
 
-export const books = [
+export const booksData = [
   {
     id: '65a7a434906d009e8a61bf25',
     picture: book1,
