@@ -14,6 +14,12 @@ export default function BookShelves() {
       )
     )
   }
+  const handleFavorite = (favId) => {
+    const favIndex = books.findIndex((b) => b.id === favId)
+    const newBooks = [...books]
+    newBooks[favIndex].isFavorite = !newBooks[favIndex].isFavorite
+    setBooks(newBooks)
+  }
   return (
     <main className="my-10 lg:my-14">
       <header className="mx-auto mb-8 max-w-7xl lg:mb-10">
@@ -33,7 +39,7 @@ export default function BookShelves() {
       </header>
       <div className="container mx-auto grid max-w-7xl grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
         {books.map((book) => (
-          <Book key={book.id} {...book} />
+          <Book key={book.id} {...book} onFavorite={handleFavorite} />
         ))}
       </div>
     </main>

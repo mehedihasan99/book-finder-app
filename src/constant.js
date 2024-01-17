@@ -33,6 +33,7 @@ export const booksData = [
     author_name: 'Anne Patterson',
     price: 109,
     publish_year: 1950,
+    isFavorite: false,
   },
   {
     id: '65a7a4344a0b4ab0777d3669',
@@ -41,6 +42,7 @@ export const booksData = [
     author_name: 'Christine Dunlap',
     price: 178,
     publish_year: 1989,
+    isFavorite: false,
   },
   {
     id: '65a7a434931f10ff128ad27f',
@@ -49,6 +51,7 @@ export const booksData = [
     author_name: 'Charity Savage',
     price: 121,
     publish_year: 1991,
+    isFavorite: false,
   },
   {
     id: '65a7a434f6c181b84623bb0c',
@@ -57,6 +60,7 @@ export const booksData = [
     author_name: 'Corrine Becker',
     price: 119,
     publish_year: 1987,
+    isFavorite: false,
   },
   {
     id: '65a7a434e1a6aba8820247c3',
@@ -65,6 +69,7 @@ export const booksData = [
     author_name: 'Yang Chaney',
     price: 105,
     publish_year: 1951,
+    isFavorite: false,
   },
   {
     id: '65a7a43408eb18a88cfe1603',
@@ -73,6 +78,7 @@ export const booksData = [
     author_name: 'Grant Lambert',
     price: 162,
     publish_year: 1999,
+    isFavorite: false,
   },
   {
     id: '65a7a4345de5ace450dbf64b',
@@ -81,6 +87,7 @@ export const booksData = [
     author_name: 'Bean Mullins',
     price: 77,
     publish_year: 1974,
+    isFavorite: false,
   },
   {
     id: '65a7a43483b71af74b9bea17',
@@ -89,6 +96,7 @@ export const booksData = [
     author_name: 'Callahan Robles',
     price: 85,
     publish_year: 2002,
+    isFavorite: false,
   },
   {
     id: '65a7a434538c67a023496967',
@@ -97,6 +105,7 @@ export const booksData = [
     author_name: 'Foley Shaffer',
     price: 120,
     publish_year: 1952,
+    isFavorite: false,
   },
   {
     id: '65a7a4348c59112220377616',
@@ -105,6 +114,7 @@ export const booksData = [
     author_name: 'Benjamin Sanchez',
     price: 178,
     publish_year: 1984,
+    isFavorite: false,
   },
   {
     id: '65a7a4343836bcf4a3160f24',
@@ -113,6 +123,7 @@ export const booksData = [
     author_name: 'Spears Kirkland',
     price: 158,
     publish_year: 1991,
+    isFavorite: false,
   },
   {
     id: '65a7a434994cb0a567a648c3',
@@ -121,6 +132,7 @@ export const booksData = [
     author_name: 'Joyce Keith',
     price: 80,
     publish_year: 1967,
+    isFavorite: false,
   },
   {
     id: '65a7a43495f133ef64ee9dd5',
@@ -129,6 +141,7 @@ export const booksData = [
     author_name: 'Harrington Deleon',
     price: 63,
     publish_year: 1983,
+    isFavorite: false,
   },
   {
     id: '65a7a434ea0da370bf3b00e8',
@@ -137,6 +150,7 @@ export const booksData = [
     author_name: 'Olson Cox',
     price: 73,
     publish_year: 1967,
+    isFavorite: false,
   },
   {
     id: '65a7a434165ea112ca46fa0e',
@@ -145,6 +159,7 @@ export const booksData = [
     author_name: 'Cathy Edwards',
     price: 186,
     publish_year: 1983,
+    isFavorite: false,
   },
   {
     id: '65a7a434cf25fe6e3c36060b',
@@ -153,6 +168,7 @@ export const booksData = [
     author_name: 'Peterson Taylor',
     price: 183,
     publish_year: 1976,
+    isFavorite: false,
   },
   {
     id: '65a7a4344632a5e7edb71355',
@@ -162,6 +178,7 @@ export const booksData = [
     author_name: 'Janette Emerson',
     price: 94,
     publish_year: 1987,
+    isFavorite: false,
   },
   {
     id: '65a7a434ff58f1de43e9d39b',
@@ -171,6 +188,7 @@ export const booksData = [
     author_name: 'Nolan Wood',
     price: 86,
     publish_year: 1989,
+    isFavorite: false,
   },
   {
     id: '65a7a434ce4121a0483af6a8',
@@ -180,6 +198,7 @@ export const booksData = [
     author_name: 'Rosemary Bradford',
     price: 184,
     publish_year: 1986,
+    isFavorite: false,
   },
   {
     id: '65a7a4344b2d28349ba53a91',
@@ -188,6 +207,7 @@ export const booksData = [
     author_name: 'Cindy Quinn',
     price: 111,
     publish_year: 1985,
+    isFavorite: false,
   },
   {
     id: '65a7a434a7417799d900dcbb',
@@ -196,6 +216,7 @@ export const booksData = [
     author_name: 'Emily Hancock',
     price: 128,
     publish_year: 1997,
+    isFavorite: false,
   },
   {
     id: '65a7a4346ec42fda3d76c6c0',
@@ -204,6 +225,7 @@ export const booksData = [
     author_name: 'Kaitlin Salinas',
     price: 109,
     publish_year: 1968,
+    isFavorite: false,
   },
   {
     id: '65a7a434498727fcdf0bf945',
@@ -212,6 +234,7 @@ export const booksData = [
     author_name: 'Hutchinson Curtis',
     price: 154,
     publish_year: 1958,
+    isFavorite: false,
   },
   {
     id: '65a7a434bd3c639640332d9a',
@@ -220,6 +243,7 @@ export const booksData = [
     author_name: 'Adrienne Fletcher',
     price: 190,
     publish_year: 2001,
+    isFavorite: false,
   },
   {
     id: '65a7a434dfc29c2acc1ef30a',
@@ -228,6 +252,7 @@ export const booksData = [
     author_name: 'Lakeisha Bartlett',
     price: 148,
     publish_year: 1984,
+    isFavorite: false,
   },
   {
     id: '65a7a434134a5d1df31e7cf2',
@@ -236,5 +261,6 @@ export const booksData = [
     author_name: 'Earnestine Cross',
     price: 100,
     publish_year: 1975,
+    isFavorite: false,
   },
 ]

@@ -1,13 +1,16 @@
 import { FaStar } from 'react-icons/fa'
-import { IoIosHeartEmpty } from 'react-icons/io'
 import { HiOutlineShoppingCart } from 'react-icons/hi2'
+import { IoIosHeart, IoIosHeartEmpty } from 'react-icons/io'
 
 export default function Book({
+  id,
   book_name,
   author_name,
   price,
   picture,
   publish_year,
+  isFavorite,
+  onFavorite,
 }) {
   return (
     <div className="space-y-3">
@@ -34,9 +37,21 @@ export default function Book({
             <HiOutlineShoppingCart className="text-xl" />
             Add to Cart
           </button>
-          <button className="flex min-w-[132px] items-center justify-center gap-1 rounded-md bg-[#1C4336]/[14%] py-1.5 text-[#1C4336] transition-all hover:bg-[#1C4336]/[24%] lg:py-1.5">
-            <IoIosHeartEmpty className="text-xl" />
-            Favourite
+
+          <button
+            onClick={() => onFavorite(id)}
+            className={`flex min-w-[132px] items-center justify-center gap-1 rounded-md ${
+              isFavorite
+                ? ' bg-[#DC2954]/[14%] py-1.5 text-[#DC2954] transition-all hover:bg-[#DC2954]/[24%] '
+                : 'bg-[#1C4336]/[14%] py-1.5 text-[#1C4336] transition-all hover:bg-[#1C4336]/[24%]'
+            } lg:py-1.5`}
+          >
+            {isFavorite ? (
+              <IoIosHeart className="text-xl text-red-500" />
+            ) : (
+              <IoIosHeartEmpty className="text-xl" />
+            )}
+            Favorite
           </button>
         </div>
       </div>
