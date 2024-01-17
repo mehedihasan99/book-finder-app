@@ -1,4 +1,4 @@
-import React from 'react'
+import { books } from '../../constant'
 import BookSearch from './BookSearch'
 import Book from './book'
 import SortOfBooks from './sortOfBooks'
@@ -21,9 +21,10 @@ export default function BookShelves() {
           <SortOfBooks />
         </div>
       </header>
-      {/* <!-- Book Grid --> */}
       <div className="container mx-auto grid max-w-7xl grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-        <Book />
+        {books.map((book) => (
+          <Book key={book.id} {...book} />
+        ))}
       </div>
     </main>
   )
