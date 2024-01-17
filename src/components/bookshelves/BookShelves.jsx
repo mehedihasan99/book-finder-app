@@ -1,9 +1,9 @@
 import { useState } from 'react'
 import { booksData } from '../../constant'
 import NotFound from '../NotFound'
+import Book from './Book'
 import BookSearch from './BookSearch'
-import Book from './book'
-import SortOfBooks from './sortOfBooks'
+import SortOfBooks from './SortOfBooks'
 
 export default function BookShelves() {
   const [filteredBooks, setFilteredBooks] = useState(booksData)
