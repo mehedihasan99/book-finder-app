@@ -3,14 +3,19 @@ import ring from '../assets/icon/ring.svg'
 import sun from '../assets/icon/sun.svg'
 import logo from '../assets/images/books/logo.png'
 
+import { useState } from 'react'
 import { useSelector } from 'react-redux'
 import shoppingCart from '../assets/icon/shopping-cart.svg'
 import useTheme from '../hooks/useTheme'
+import CartModal from './bookshelves/CartModal'
 export default function Header() {
+  const [showModal, setShowModal] = useState(false)
   const { darkMode, setDarkMode } = useTheme()
   const cartItems = useSelector((store) => store.cart.items)
+  console.log(cartItems)
   return (
     <nav className=" bg-gray-50 fixed top-0 left-0 right-0 z-50 py-2 shadow dark:bg-gray-900 dark:border-b border-gray-600  dark:text-white">
+      {showModal && <CartModal onCloseModal={() => setShowModal(false)} />}
       <div className="container mx-auto flex items-center justify-between gap-x-6 px-4 max-w-7xl ">
         <img
           className="max-w-[120px] w-16 h-16 md:max-w-[180px] transition-transform duration-300 hover:scale-105"
@@ -36,7 +41,8 @@ export default function Header() {
             </a>
           </li>
           <li className="relative">
-            <a
+            <button
+              onClick={() => setShowModal(true)}
               className="bg-primary/20 dark:bg-primary/[7%] rounded-lg backdrop-blur-[2px] p-1 inline-block relative"
               href="#"
             >
@@ -46,7 +52,7 @@ export default function Header() {
                   {cartItems.length}
                 </span>
               )}
-            </a>
+            </button>
           </li>
         </ul>
       </div>
