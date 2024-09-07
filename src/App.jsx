@@ -1,13 +1,14 @@
-import Footer from './components/Footer'
-import Header from './components/Header'
-import BookShelves from './components/bookshelves/BookShelves'
+import { useState } from 'react'
+import Page from './components/Page'
+import { ThemeContext } from './context'
 function App() {
+  const [darkMode, setDarkMode] = useState(true)
   return (
-    <>
-      <Header />
-      <BookShelves />
-      <Footer />
-    </>
+    <ThemeContext.Provider value={{ darkMode, setDarkMode }}>
+      <div className={`${darkMode ? 'dark' : ''}`}>
+        <Page />
+      </div>
+    </ThemeContext.Provider>
   )
 }
 

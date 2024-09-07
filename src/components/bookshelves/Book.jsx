@@ -13,11 +13,15 @@ export default function Book({
   onFavorite,
 }) {
   return (
-    <div className="space-y-3">
-      <div className="flex items-center justify-center rounded-md border border-[#324251]/30 bg-white p-4">
-        <img className="max-w-[144px]" src={picture} alt="book name" />
+    <div className="space-y-3 dark:bg-gray-800 dark:text-gray-200 p-3 rounded">
+      {' '}
+      {/* Dark mode background and text color */}
+      <div className="flex items-center justify-center rounded-md border border-[#04070a]/30 dark:border-gray-600 bg-white dark:bg-gray-900 p-4">
+        {' '}
+        {/* Dark mode border and background */}
+        <img className="max-w-[144px] rounded" src={picture} alt={book_name} />
       </div>
-      <div className="space-y-3">
+      <div className="space-y-3 ">
         <h4 className="text-lg font-bold lg:text-xl">{book_name}</h4>
         <p className="text-xs lg:text-sm">
           By : <span>{author_name}</span>
@@ -33,23 +37,25 @@ export default function Book({
           </div>
         </div>
         <div className="flex items-center gap-3 text-xs lg:text-sm">
-          <button className="flex min-w-[132px] items-center justify-center gap-1 rounded-md bg-[#1C4336] py-1.5 text-white transition-all hover:opacity-80 lg:py-1.5">
+          <button className="flex min-w-[132px] items-center justify-center gap-1 rounded-md bg-[#1C4336] py-1.5 text-white transition-all hover:opacity-80 lg:py-1.5 dark:bg-[#2d6a4f] dark:text-white dark:hover:bg-[#1b4f2a]">
+            {' '}
+            {/* Dark mode button colors */}
             <HiOutlineShoppingCart className="text-xl" />
             Add to Cart
           </button>
 
           <button
             onClick={() => onFavorite(id)}
-            className={`flex min-w-[132px] items-center justify-center gap-1 rounded-md ${
+            className={`flex min-w-[132px] items-center dark:text-white justify-center gap-1 rounded-md ${
               isFavorite
-                ? ' bg-[#DC2954]/[14%] py-1.5 text-[#DC2954] transition-all hover:bg-[#DC2954]/[24%] '
-                : 'bg-[#1C4336]/[14%] py-1.5 text-[#1C4336] transition-all hover:bg-[#1C4336]/[24%]'
+                ? 'bg-[#DC2954]/[14%] py-1.5 text-[#DC2954] transition-all hover:bg-[#DC2954]/[24%] dark:bg-[#DC2954]/[14%] dark:text-[#DC2954] dark:hover:bg-[#DC2954]/[24%]'
+                : 'bg-[#1C4336]/[14%] py-1.5 text-[#1C4336] transition-all hover:bg-[#1C4336]/[24%] dark:bg-[#1C4336]/[14%] dark:text-[#1C4336] dark:hover:bg-[#1C4336]/[24%]'
             } lg:py-1.5`}
           >
             {isFavorite ? (
-              <IoIosHeart className="text-xl text-red-500" />
+              <IoIosHeart className="text-xl text-red-500 dark:text-red-500" />
             ) : (
-              <IoIosHeartEmpty className="text-xl" />
+              <IoIosHeartEmpty className="text-xl dark:text-gray-400" />
             )}
             Favorite
           </button>
