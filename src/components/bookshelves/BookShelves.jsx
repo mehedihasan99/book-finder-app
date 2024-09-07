@@ -72,7 +72,7 @@ export default function BookShelves() {
       {sortedBooks.length > 0 ? (
         <div className="container mx-auto grid max-w-7xl grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {sortedBooks.map((book) => (
-            <Book key={book.id} {...book} onFavorite={handleFavorite} />
+            <Book key={book.id} book={book} onFavorite={handleFavorite} />
           ))}
         </div>
       ) : (
